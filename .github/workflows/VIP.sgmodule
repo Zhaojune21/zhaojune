@@ -1,4 +1,7 @@
 
+#!name=自己的库
+#!desc=酷我vip，wps，百度网盘
+
 [MITM]
 hostname = %APPEND% pan.baidu.com, vip1.kuwo.cn, account.wps.cn
 
