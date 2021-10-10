@@ -1,15 +1,7 @@
-#!name=自己的库
-#!desc=酷我vip，wps，百度网盘
-
-[MITM]
-hostname = %APPEND% pan.baidu.com, vip1.kuwo.cn, account.wps.cn
+#!name=百度云盘vip
+#!desc=百度网盘vip
 
 [Script]
-# 百度网盘 解除在线视频倍率/清晰度
-^https:\/\/pan\.baidu\.com\/rest\/\d\.\d\/membership\/user http-response https://raw.githubusercontent.com/NobyDa/Script/master/Surge/JS/BaiduCloud.js
-
-# 酷我音乐SVIP (By yxiaocai)
-^https?:\/\/vip1\.kuwo\.cn\/(vip\/v2\/user\/vip|vip\/spi/mservice) http-response https://raw.githubusercontent.com/NobyDa/Script/master/Surge/JS/Kuwo.js
-
-# WPS (By eHpo)
-^https://account.wps.cn/api/users/ http-response https://raw.githubusercontent.com/NobyDa/Script/master/Surge/JS/Wps.js
+百度云盘vip = type=http-request,pattern=^https:\/\/pan\.baidu\.com\/rest\/\d\.\d\/membership\/user,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/Surge/JS/BaiduCloud.js
+[MITM]
+hostname = %APPEND% pan.baidu.com
