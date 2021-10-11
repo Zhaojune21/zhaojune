@@ -1,0 +1,10 @@
+#!name=termius vip
+#!desc=termius
+#!system=ios
+
+[Script]
+
+http-response https:\/\/api\.termius\.com\/api\/v3\/bulk\/account\/ requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Zhaojune21/zhaojune/main/.github/workflows/Termius.js, tag=termius
+
+[MITM]
+hostname = %APPEND% api.termius.com
